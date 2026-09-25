@@ -1,7 +1,6 @@
 class Noslop < Formula
   desc "Linter that flags AI-sounding patterns in Japanese text"
   homepage "https://github.com/owayo/noslop"
-  version "26.9.103"
   license "MIT"
 
   on_macos do
