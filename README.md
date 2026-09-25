@@ -8,7 +8,15 @@
 brew install owayo/noslop/noslop
 ```
 
-`brew tap owayo/noslop` を先に実行しておけば、`brew install noslop` でも入ります。
+完全な名前で入れると、その formula が信頼され (Homebrew の [Tap Trust](https://docs.brew.sh/Tap-Trust))、以後は `brew upgrade noslop` のように短い名前で扱えます。
+
+`brew tap owayo/noslop` を先に実行して短い名前で入れる場合は、先に formula を信頼します。信頼していないと、`brew install noslop` は `Refusing to load formula owayo/noslop/noslop from untrusted tap owayo/noslop.` で止まります。
+
+```bash
+brew tap owayo/noslop
+brew trust --formula owayo/noslop/noslop
+brew install noslop
+```
 
 ## 更新と削除
 
@@ -22,7 +30,7 @@ brew uninstall noslop
 | OS | CPU |
 |----|-----|
 | macOS | Apple Silicon・Intel |
-| Linux | x86_64・arm64 (arm64 は、arm64 版を添付した v26.9.103 より後のリリースから) |
+| Linux | x86_64・arm64 |
 
 Windows では、noslop の [Releases](https://github.com/owayo/noslop/releases) からバイナリを取得してください。
 
