@@ -5,21 +5,21 @@ class Noslop < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/owayo/noslop/releases/download/v26.9.106/noslop-aarch64-apple-darwin.tar.gz"
-      sha256 "6236989156162160b05ceaceead1432569a99a382b237d48e1dd2a3f3c4e5369"
+      url "https://github.com/owayo/noslop/releases/download/v26.9.107/noslop-aarch64-apple-darwin.tar.gz"
+      sha256 "5caead6b1bc847ca55dc5ece1b7a95d8d254bd9d3ce721e3d798505335f8d3cb"
     else
-      url "https://github.com/owayo/noslop/releases/download/v26.9.106/noslop-x86_64-apple-darwin.tar.gz"
-      sha256 "d409ce4e69ff9435cea7a6c5983ae6859e661f1ecf4e8dbde9683f01a4e702ff"
+      url "https://github.com/owayo/noslop/releases/download/v26.9.107/noslop-x86_64-apple-darwin.tar.gz"
+      sha256 "8c4cc8fb1ca5eea599eafe16b9a52b24b4d7263b6e56d199df0d97bc023e680b"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/owayo/noslop/releases/download/v26.9.106/noslop-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "67f472b8eac4b9ec523d19ecb9594020b1ffc7e18c82a2afd1d5dbf24cf93f48"
+      url "https://github.com/owayo/noslop/releases/download/v26.9.107/noslop-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "8d75ec9ae1b1730a7dc4b0a3b49a0cd38c6c5ba953b3ea977ad5969e8aad0ad6"
     else
-      url "https://github.com/owayo/noslop/releases/download/v26.9.106/noslop-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "32815966c479d7d1770183933925c0b91c253db1e340591bcf34558cfc0e4199"
+      url "https://github.com/owayo/noslop/releases/download/v26.9.107/noslop-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "654a1bf399221edf70910852caad0c2966018611fe3eccddc414253d65b9f33f"
     end
   end
 
