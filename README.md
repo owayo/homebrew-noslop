@@ -32,11 +32,11 @@ brew uninstall noslop
 | macOS | Apple Silicon・Intel |
 | Linux | x86_64・arm64 |
 
-Windows では、noslop の [Releases](https://github.com/owayo/noslop/releases) からバイナリを取得してください。
+Windows では、noslop の [Releases](https://github.com/owayo/noslop/releases) から `noslop-x86_64-pc-windows-msvc.zip` を取得して展開してください。
 
 ## 入るもの
 
-noslop の Releases に添付したビルド済みのバイナリを入れます (ソースからはビルドしません)。形態素解析の辞書はバイナリに同梱しています。
+noslop の Releases に添付したビルド済みのアーカイブ (`noslop-<ターゲット>.tar.gz`) から、バイナリと、ライセンスの表示 (`LICENSE`・`THIRD_PARTY_NOTICES.md`) を入れます (ソースからはビルドしません)。形態素解析の辞書と、コードのコメントを読む文法はバイナリに入っています。
 
 Claude Code・Codex CLI のスキルは入れません。使うなら、入れた後に次を実行します。
 
