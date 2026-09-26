@@ -5,29 +5,28 @@ class Noslop < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/owayo/noslop/releases/download/v26.9.105/noslop-darwin-arm64"
-      sha256 "d38bd2a6048a371425c1d45a11115f4fe1838409a586e38b53d87319f08bba91"
+      url "https://github.com/owayo/noslop/releases/download/v26.9.106/noslop-aarch64-apple-darwin.tar.gz"
+      sha256 "6236989156162160b05ceaceead1432569a99a382b237d48e1dd2a3f3c4e5369"
     else
-      url "https://github.com/owayo/noslop/releases/download/v26.9.105/noslop-darwin-amd64"
-      sha256 "599c635a803e06b414747919338a0c769ac1c3f9f3bdf8794ae2df71b902d675"
+      url "https://github.com/owayo/noslop/releases/download/v26.9.106/noslop-x86_64-apple-darwin.tar.gz"
+      sha256 "d409ce4e69ff9435cea7a6c5983ae6859e661f1ecf4e8dbde9683f01a4e702ff"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/owayo/noslop/releases/download/v26.9.105/noslop-linux-arm64"
-      sha256 "ed3cb87a86b8d610efa95000570dae6074fb68ea96b2a6de94b345b1bf655ab2"
+      url "https://github.com/owayo/noslop/releases/download/v26.9.106/noslop-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "67f472b8eac4b9ec523d19ecb9594020b1ffc7e18c82a2afd1d5dbf24cf93f48"
     else
-      url "https://github.com/owayo/noslop/releases/download/v26.9.105/noslop-linux-amd64"
-      sha256 "53d8c6f83a6481029cecb57c297e438ae8aeeabc356a439e6cb9e40c12d323fd"
+      url "https://github.com/owayo/noslop/releases/download/v26.9.106/noslop-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "32815966c479d7d1770183933925c0b91c253db1e340591bcf34558cfc0e4199"
     end
   end
 
   def install
-    # リリースの添付は圧縮していないバイナリ (noslop-<OS>-<CPU>) なので、名前を noslop に直して入れる
-    binary = Dir["noslop-*"].first
-    chmod 0755, binary
-    bin.install binary => "noslop"
+    bin.install "noslop"
+    # LICENSE は Homebrew が自動で入れる。同梱の辞書と文法の表示は名前が決まった形でないので明示する
+    prefix.install "THIRD_PARTY_NOTICES.md"
   end
 
   test do
